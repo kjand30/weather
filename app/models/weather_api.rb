@@ -2,25 +2,43 @@ class WeatherAPI
 
   require 'Unirest'
  
-  def self.get_weather
+  # def new
+  #  WeatherAPI.new[:location]
+  # end
 
-    response = Unirest.get "https://george-vustrey-weather.p.mashape.com/api.php?location=Miami",
+  def self.get_weather(location)
+
+    response = Unirest.get "https://george-vustrey-weather.p.mashape.com/api.php?location=#{location}",
     headers:{
     "X-Mashape-Key" => "N4oUSJBSeymsh73eOWuHWwHSyjB7p1UmqkzjsnXCc7UMI3jnzD",
     "Accept" => "application/json"
     }
-    
 
-    response.body.each do |day|
-    # day.each do |k, v|
-    # p "#{k}: #{v}"
-    # end
-    p day["day_of_week"], day["high"], day["condition"]
-    end
-    # puts response.body
+    location_weather = response.body
 
   end 
+
+  def self.get_weather2(location2)
+      response2 = Unirest.get "https://george-vustrey-weather.p.mashape.com/api.php?location=#{location2}",
+    headers:{
+    "X-Mashape-Key" => "N4oUSJBSeymsh73eOWuHWwHSyjB7p1UmqkzjsnXCc7UMI3jnzD",
+    "Accept" => "application/json"
+    }
+
+    location2_weather = response2.body
+
+
+  end
+
+
+  # def show
+  #   WeatherAPI.new
+  # end
+
+
 end 
 
-WeatherAPI.get_weather
+
+
+# WeatherAPI.get_weather
 

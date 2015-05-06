@@ -1,11 +1,14 @@
 
-<% @weather.each do |day| %>
 
-<p>
-<%=day["day_of_week"] %> 
-<%=day["high"] %> 
-<%=day["condition"] %>
-</p>
 
+<% if @weather[0]["high"] > @weather2[0]["high"] %>
+<%= params[:location].titleize %>
+<%= @weather[@day]["day_of_week"] %>
+<%= @weather[@day]["high"] %>
+<%= @weather[@day]["condition"] %>
+<% else %>
+<%= params[:location2].titleize  %>
+<%= @weather2[@day]["day_of_week"] %>
+<%= @weather2[@day]["high"] %>
+<%= @weather2[@day]["condition"] %>
 <% end %>
-
