@@ -1,13 +1,12 @@
 <h1>Weather index</h1>
 
-<dl>
-<% @weather.each do |day| %>
 
-<p>
-<%=day["day_of_week"] %> 
-<%=day["high"] %> 
-<%=day["condition"] %>
-</p>
 
-<% end %>
-</dl>
+  <%= form_tag(results_path, method: "get") do %>
+  <%= label_tag :city, "Search for:" %>
+  <%= text_field_tag :city %> 
+
+<%= submit_tag("Search") %>
+
+<% end %> 
+

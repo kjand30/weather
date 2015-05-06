@@ -1,0 +1,11 @@
+
+<% @weather.each do |day| %>
+
+<p>
+<%=day["day_of_week"] %> 
+<%=day["high"] %> 
+<%=day["condition"] %>
+</p>
+
+<% end %>
+
