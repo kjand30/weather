@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'devise'
 # gem 'httparty'
 gem 'unirest'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

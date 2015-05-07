@@ -55,6 +55,7 @@ transform-origin: 50% 50% 0;
 .background {
   background: url("http://www.adknowledge.com/wp-content/uploads/2013/11/HotInTheCity.jpeg");
   background-size: 100%;
+  height:;
   width: 600px;
   background-repeat: no-repeat;
 
