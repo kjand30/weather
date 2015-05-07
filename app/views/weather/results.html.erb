@@ -1,9 +1,8 @@
 
-<p>
- background   
-</p>
+<% if (@weather[0]["high"]).nil?||(@weather2[0]["high"]).nil? %>
+<%= "Not a valid location! Try again." %>
 
-<% if @weather[0]["high"] > @weather2[0]["high"] %>
+<% elsif @weather[0]["high"] > @weather2[0]["high"] %>
 <%= params[:location].titleize %>
 <%= @weather[@day]["day_of_week"] %>
 <%= @weather[@day]["high"] %>
