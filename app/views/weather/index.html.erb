@@ -1,4 +1,20 @@
-<h1>Weather index</h1>
+<header>
+  
+    <div container>
+  <h1>The Heat is On!</h1>
+ </div>
+
+ <div>
+  <p> 
+  <h2>We'll pick the hottest city for you</h2>
+  </p>
+
+</div>
+</header>
+
+
+
+
 
 
 
@@ -6,9 +22,9 @@
   <%= label_tag :title, "Search for:" %>
   <%= text_field_tag :location %>
   <%= text_field_tag :location2 %> 
-  <%= select_tag(:day_id, options_for_select([['Today', 1], ['Tomorrow', 2]])) %>
+  <%= select_tag(:day_id, options_for_select([['Yesterday', 0],['Today', 1], ['Tomorrow', 2],['Day after Tomorrow',3]]))%>
 
-<%= submit_tag("Search") %>
+<%= submit_tag("Go") %>
 
 <% end %> 
 
