@@ -14,13 +14,96 @@
  *= require_self
  */
 
- #headline {
-  font-family: "Helvetica", sans-serif;
-  font-size: 24px;
-
+html,body { 
+  margin: 0;
+  padding: 0;
+}
+.navbar-default {
+  background-color: white;
+  border-color: #e7e7e7;
 }
 
-/*h1 {
+.global {
+      background: url(https://ecochiccayman.files.wordpress.com/2015/02/melting-ice-polar-bear-on-206311.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin:0 auto;
+  height:900px;
+}
+
+.desert {
+  background: url(http://www.byronic-hero.com/wp-content/uploads/2014/02/dry-desert-wasteland.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin:0 auto;
+  height:900px;
+}
+
+.head {
+    background: url(http://www.healthcare-online.org/images/10405017/body-odor.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin:0 auto;
+  height:800px;
+}
+
+.stinky {
+    background: url(http://i.huffpost.com/gen/1806332/images/o-SMELLY-facebook.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin:0 auto;
+  height:800px;
+}
+
+#quote {
+  background-color: orange;
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-align: center;
+  color:  white;
+  font-size: 50px;
+  padding: 20px;
+  }
+
+
+.formit {
+  height: 100px;
+  margin: 20px 20px 20px 400px;
+}
+
+.image{
+  float: right;
+  margin-right: 150px;
+}
+
+.float-text h2 {
+  margin-left: 120px;
+  font-size: 80px;
+  color:gray;
+}
+
+/*body {
+  background: url(http://th05.deviantart.net/fs70/PRE/f/2011/013/0/9/something_horrible_by_rebelatheart-d372n2x.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/
+
+h1.doit {
+  text-align: center;
+  font-size: 120px;
+}
+
+h1.results {
   display: block;
 -webkit-box-sizing: content-box;
 -moz-box-sizing: content-box;
@@ -58,7 +141,7 @@ transform: none;
 transform-origin: 50% 50% 0;
 } 
 
-*/
+
 .background {
   background: url("http://www.adknowledge.com/wp-content/uploads/2013/11/HotInTheCity.jpeg");
   background-size: 100%;

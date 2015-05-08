@@ -16,9 +16,7 @@
   <%= csrf_meta_tags %>
 
 </head>
-
-<body>
-    <nav>
+<nav class="navbar-fixed-top navbar navbar-default">
         <%= link_to image_tag("tumblr_m1m8fz1W5G1qa2d04o1_400.gif", width: '100', height:'100', alt: "Heat"), '/' %>
        <p class="navbar-text pull-right">
           <% if user_signed_in? %>
@@ -30,18 +28,22 @@
             <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
           <% end %>
       </nav>
-    
 
-<% if notice %>
+      <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>
 <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
+<body>
+    
+    
 
-<div container>
+
+
+
 <%= yield %>
-</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 

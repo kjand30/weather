@@ -1,18 +1,54 @@
+
+
 <header>
   
+  	<div class="global">
+		  	
+  	</div>
+
+		<h2 class="animated FadeIn" id="quote"> Global warming isn't a prediction.  It is happening.</h2>
+
+		<div class="desert">
+		  	
+  	</div>
 
 
+  			<div class="image">
+		  		<%= image_tag('usa-temp.png')%>
+		  	</div>
+		  	<div class="float-text">
+		  		<h2>The USA will stink more than Swiss Cheese.</h2>
+		  	</div>
+<div class="head">
+</div>
+
+  			<h2 class="animated FadeIn" id="quote"> By the year 2020 the USA will be enveloped with Body Odor.</h2>
+
+		<div class="stinky">
+		  			
+  			</div>
+
+  			<h2 class="animated FadeIn" id="quote"> Temperature is rising and body odor is increasing!</h2>
 </header>
 
-<body>
   
-  
-  <h2 class="animated slideInUp" id="headline"> Global warming isn't a prediction. <br> It is happening. - James Hansen </h2>
 
-  <p class="animated slideInUp" id="headline"><%= image_tag("climate.jpg", width: "437", height: "400", alt: "Heat") %></p>
+  	<div class="jumbotron">
+  		<h1>The World is Getting HOt!</h1>
+  		<h2>Learn which city is the hottest</h2> 
+  	</div>
+  	  <div class="formit">
+    <%= form_tag(results_path, method: "get") do %>
+  <%= label_tag :title, "Search for:" %>
+  <%= text_field_tag :location %>
+  <%= text_field_tag :location2 %> 
+  <%= select_tag(:day_id, options_for_select([['Yesterday', 0],['Today', 1], ['Tomorrow', 2],['Day after Tomorrow',3]])) %>
 
-  <h3 class="animated slideInUp" id="headline">Scientific evidence for warming of the climate system is unequivocal. - Intergovernmental Panel on Climate Change</h3>
+
+<%= submit_tag("Go") %>
+
+<% end %> 
+</div>
+
 
  
-
-</body>
