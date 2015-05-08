@@ -28,20 +28,7 @@
 			<li><h1 class="city1"><%= @weather[@day]["high"] %></h1></li>
 		</ul>
 
-		<table class="table table-hover">
-			<thead>
-			<tr>
-				<h4>
-					<%= Extended Forecast %>
-				</h4>
-			</tr>
-		</thead>
-		<% @weather.each do |day| %>
-      	<tr><%   day.values.each do |v| %>
-        <td><%=  v %></td>
-        <%  end %></tr>
-        <% end %>
-   		 </table>
+
 
 		<br/><br/><br/>
 
@@ -61,29 +48,16 @@
 			<li><h1 class="city1"><%= @weather2[@day]["high"] %></h1></li>
 		</ul>
 
-		<table class="table table-hover">
-			<thead>
-			<tr>
-				<h4>
-					Extended Forecast
-				</h4>
-			</tr>
-		</thead>
-		<% @weather2.each do |day| %>
-      	<tr><%   day.values.each do |v| %>
-        <td><%=  v %></td>
-        <%  end %></tr>
-        <% end %>
-   		 </table>
 
 		<% end %>
 		</div>
 		<br />
 
 		<div class="row">
-		<% if @weather[0]["high"] < @weather2[0]["high"] %>
+	<% if @weather[0]["high"] < @weather2[0]["high"] %>
 		<!-- <div class="jumbotron"> -->
 		<h2 class="announcement">
+		
 		<ul class="list-inline city1">
 			<li><h1><%= "The Coolest City is:" %></h1></li>
 			<li><h1 class="city1"><%= params[:location].titleize %></h1></li>
