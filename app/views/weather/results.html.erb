@@ -1,104 +1,117 @@
+<div class="jumbotron">
+		<h1>The Results Are In!</h1>
+	</div>
+
 <div class="container">
 
-		<div class="row">
 
-		<% if (@weather[0]["high"]).nil?||(@weather2[0]["high"]).nil? %>
-		<%- flash[:alert] = "Wrong Input! Try Again!" %>
 
-		<% elsif @weather[0]["high"] > @weather2[0]["high"] %>
+<div class="row">
+
+<% if (@weather[0]["high"]).nil?||(@weather2[0]["high"]).nil? %>
+	<%- flash[:alert] = "Wrong Input! Try Again!" %>
+
+	<% elsif @weather[0]["high"] > @weather2[0]["high"] %>
 		<!-- <div class="jumbotron"> -->
-		<h1><span class="label label-default">
-		<%= "The Hottest City is:  " %></h1>
+	<ul class="list-inline city1">
+			<li><h1><%= "The Hottest City is:" %></h1></li>
+			<li><h1 class="city1"><%= params[:location].titleize %></h1></li>
+		</ul>
 
-		<h1 class="city1">
-		  <%= params[:location].titleize %>
-		</h1>
-		</span>
+		<ul class="list-inline city1">
+			<li><h1><%= "Day: " %> </h1></li>
+			<li><h1 class="city1"><%= @weather[@day]["day_of_week"] %></h1></li>
+		</ul>
+		
+		<ul class="list-inline city1">
+			<li><h1><%= "Temperature:" %> </h1></li>
+			<li><h1 class="city1"><%= @weather[@day]["high"] %></h1></li>
+		</ul>
 
-		<h1><span class="label label-default">
-		<%= "Day: " %> </h1>
-		<h1 class="city1">
-		<%= @weather[@day]["day_of_week"] %>
-		</h1></span>
+		<table class="table table-hover">
+			<thead>
+			<tr>
+				<h4>
+					<%= Extended Forecast %>
+				</h4>
+			</tr>
+		</thead>
+		<% @weather.each do |day| %>
+      	<tr><%   day.values.each do |v| %>
+        <td><%=  v %></td>
+        <%  end %></tr>
+        <% end %>
+   		 </table>
 
-		<div class="col-sm-4">
-		<h1><span class="label label-default">
-		<%= "Temperature is:   " %> 
-		</h1>
-		</div>
 		<br/><br/><br/>
-		<div class="col-sm-4">
-		<div class="thumbnail">
-			<h1 class="high">
-			<%= @weather[@day]["high"] %>
-			</h1>
-		</div>
-		</div>
 
 		<% else %>
-		<h2 class="announcement">
-		<%= "The Hottest City is:  " %> 
-		</h2>
+		<ul class="list-inline city1">
+			<li><h1><%= "The Hottest City is:" %></h1></li>
+			<li><h1 class="city1"><%= params[:location2].titleize %></h1></li>
+		</ul>
 
-		<h1 class="city1">
-		  <%= params[:location2].titleize  %>
-		</h1>
+		<ul class="list-inline city1">
+			<li><h1><%= "Day: " %> </h1></li>
+			<li><h1 class="city1"><%= @weather2[@day]["day_of_week"] %></h1></li>
+		</ul>
+		
+		<ul class="list-inline city1">
+			<li><h1><%= "Temperature:" %> </h1></li>
+			<li><h1 class="city1"><%= @weather2[@day]["high"] %></h1></li>
+		</ul>
 
-		<h2 class= "dayOfWeek">
-		<%= "Day: " %> 
-		<%= @weather2[@day]["day_of_week"] %>
-		</h2>
-
-		<h2 class = "temperature">
-		<%= "Temperature is:   " %> 
-		</h2>
-
-		<h1 class="high">
-		<%= @weather2[@day]["high"] %>
-		</h1>
+		<table class="table table-hover">
+			<thead>
+			<tr>
+				<h4>
+					Extended Forecast
+				</h4>
+			</tr>
+		</thead>
+		<% @weather2.each do |day| %>
+      	<tr><%   day.values.each do |v| %>
+        <td><%=  v %></td>
+        <%  end %></tr>
+        <% end %>
+   		 </table>
 
 		<% end %>
 		</div>
-		<p></p>
+		<br />
 
 		<div class="row">
 		<% if @weather[0]["high"] < @weather2[0]["high"] %>
 		<!-- <div class="jumbotron"> -->
 		<h2 class="announcement">
-		<%= "The Coolest City is:  " %> 
-		</h2>
-		<h1 class="city1">
-		  <%= params[:location].titleize %>
-		</h1>
-
-		<h2 class = "temperature">
-		<%= "Temperature is:   " %> 
-		</h2>
-
-		<h1 class="high">
-		<%= @weather[@day]["high"] %>
-		</h1>
+		<ul class="list-inline city1">
+			<li><h1><%= "The Coolest City is:" %></h1></li>
+			<li><h1 class="city1"><%= params[:location].titleize %></h1></li>
+		</ul>
+		
+		<ul class="list-inline city1">
+			<li><h1><%= "Temperature:" %> </h1></li>
+			<li><h1 class="city1"><%= @weather[@day]["high"] %></h1></li>
+		</ul>
 
 		<% elsif %>
-		<h3 class="announcement">
-		<%= "The Coolest City is:  " %> 
-		</h2>
 
-		<h2 class="city1">
-		  <%= params[:location2].titleize  %>
-		</h1>
-
-		<h2 class = "temperature">
-		<%= "Temperature is:   " %> 
-		</h2>
-
-		<h1 class="high">
-		<%= @weather2[@day]["high"] %>
-		</h1>
+		<ul class="list-inline city1">
+			<li><h1><%= "The Coolest City is:" %></h1></li>
+			<li><h1 class="city1"><%= params[:location2].titleize %></h1></li>
+		</ul>
+		
+		<ul class="list-inline city1">
+			<li><h1><%= "Temperature:" %> </h1></li>
+			<li><h1 class="city1"><%= @weather2[@day]["high"] %></h1></li>
+		</ul>
 
 		<% end %>
 		</div>
-
+		<br /><br />
+			<h3 class="try">Try Again!
+			</h3>
+		
 		  <%= render 'form' %>
 		</div>
 

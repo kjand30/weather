@@ -69,7 +69,7 @@ body { padding-top: 100px; }
 
 #quote {
   background-color: orange;
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
   color:  white;
   font-size: 50px;
@@ -78,7 +78,17 @@ body { padding-top: 100px; }
 
 .float-text-first {
   text-align: center;
+  color: white;
+  font-size: 50px; 
   
+}
+
+.hot {
+  color:white;
+  font-size: 90px;
+  float: right;
+  margin-right: 150px;
+  margin-top: 300px;
 }
 
 span #divide {
@@ -107,6 +117,8 @@ span #divide {
   font-family: 'Oswald', sans-serif;
 
 }
+
+\
 /*body {
   background: url(http://th05.deviantart.net/fs70/PRE/f/2011/013/0/9/something_horrible_by_rebelatheart-d372n2x.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -173,6 +185,11 @@ transform-origin: 50% 50% 0;
   font-size: 150px; 
   text-align: center; 
 
+}
+
+.try {
+    font-size: 50px; 
+  text-align: center; 
 }
 
 .announcement {

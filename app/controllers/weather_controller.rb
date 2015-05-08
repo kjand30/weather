@@ -7,7 +7,16 @@ class WeatherController < ApplicationController
   	@day = params[:day_id].to_i
     @weather = WeatherAPI.get_weather(params[:location])
     @weather2 = WeatherAPI.get_weather(params[:location2])
-  end 
+
+    @extended2 = []
+    @extended1 = @weather.each do |day|
+      day.values.each do |v|
+        @extended2.push(v)
+      end
+      puts "-------------------------"
+      end  
+
+  end
 
 
 # private
