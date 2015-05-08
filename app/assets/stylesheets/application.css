@@ -76,6 +76,11 @@ body { padding-top: 100px; }
   padding: 20px;
   }
 
+.float-text-first {
+  text-align: center;
+  
+}
+
 span #divide {
   text-align: center;
 }

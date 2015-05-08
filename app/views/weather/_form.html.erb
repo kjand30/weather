@@ -16,7 +16,7 @@
         </div>  
         <div class="col-md-4">
           <div class="form-group">
-            <label for="days">Timeframe</label>
+            <label for="days">Day</label>
             <%= select_tag(:day_id, options_for_select([['Thursday', 0],['Friday', 1], ['Saturday', 2],['Sunday',3],['Monday',4],['Tuesday',5]]), class:'form-control') %> 
           </div>
         </div>
@@ -26,7 +26,7 @@
        <div class="col-md-3 column-center">
         <div class="form-group">
           <div class="text-center">
-            <button class="btn btn-block btn-danger btn-lg" type="submit" data-disable-with="Muy Caliente!">Turn Up The Heat</button>
+            <button class="btn btn-block btn-danger btn-lg" type="submit" data-disable-with="Muy Caliente!" data-toggle="modal" data-target=".bs-example-modal-lg">Turn Up The Heat</button>
           </div>
         </div>
       </div>
