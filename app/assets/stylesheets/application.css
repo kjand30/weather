@@ -76,6 +76,9 @@ body { padding-top: 100px; }
   padding: 20px;
   }
 
+span #divide {
+  text-align: center;
+}
 
 .formit {
   height: 100px;
@@ -107,10 +110,10 @@ body { padding-top: 100px; }
   background-size: cover;
 }*/
 
-h1.doit {
+/*h1.doit {
   text-align: center;
   font-size: 120px;
-}
+}*/
 
 h1.results {
   display: block;
