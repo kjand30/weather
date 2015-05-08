@@ -14,13 +14,16 @@
  *= require_self
  */
 
-html,body { 
-  margin: 0;
-  padding: 0;
+body { padding-top: 100px; }
+
+.column-center{
+  margin: 0 auto;
+  float: none;
 }
 .navbar-default {
   background-color: white;
   border-color: #e7e7e7;
+  opacity: 0.9;
 }
 
 .global {
@@ -51,6 +54,7 @@ html,body {
   background-size: cover;
   margin:0 auto;
   height:800px;
+  background-position: top;
 }
 
 .stinky {
@@ -77,6 +81,7 @@ html,body {
 .formit {
   height: 100px;
   margin: 20px 20px 20px 400px;
+
 }
 
 .image{
@@ -90,6 +95,11 @@ html,body {
   color:gray;
 }
 
+.slogan {
+  text-align: center; 
+  font-family: 'Oswald', sans-serif;
+
+}
 /*body {
   background: url(http://th05.deviantart.net/fs70/PRE/f/2011/013/0/9/something_horrible_by_rebelatheart-d372n2x.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -152,8 +162,37 @@ transform-origin: 50% 50% 0;
 
 }
 
+.city1 {
+  font-size: 150px; 
+  text-align: center; 
+
+}
+
+.announcement {
+  font-size: 80px; 
+  text-align: center; 
 
 
+}
+
+.high {
+  color: #fc5151;
+  text-align: center; 
+  font-size: 100px;
+
+
+}
+
+.temperature{
+  font-size: 60px;
+  text-align: center; 
+}
+
+.dayOfWeek {
+  font-size: 60px;
+  text-align: center; 
+
+}
 
 @charset "UTF-8";
 

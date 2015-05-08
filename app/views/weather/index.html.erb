@@ -1,54 +1,33 @@
 
+<div class="global"></div>
 
-<header>
-  
-  	<div class="global">
-		  	
-  	</div>
+<h2 class="animated FadeIn" id="quote"> Global warming isn't a prediction.  It is happening.</h2>
 
-		<h2 class="animated FadeIn" id="quote"> Global warming isn't a prediction.  It is happening.</h2>
+<div class="desert"></div>
 
-		<div class="desert">
-		  	
-  	</div>
+<h2 class="animated FadeIn" id="quote"> By the year 2020, body odor will be rampant.</h2>
 
+<div class="head"></div>
 
-  			<div class="image">
-		  		<%= image_tag('usa-temp.png')%>
-		  	</div>
-		  	<div class="float-text">
-		  		<h2>The USA will stink more than Swiss Cheese.</h2>
-		  	</div>
-<div class="head">
+<div class="float-text">
+  <div class="image"> 
+    <%= image_tag('usa-temp.png')%>
+  </div>
+
+  <h2>The USA will stink more than Swiss Cheese.</h2>
 </div>
 
-  			<h2 class="animated FadeIn" id="quote"> By the year 2020 the USA will be enveloped with Body Odor.</h2>
+<div class="stinky"></div>
 
-		<div class="stinky">
-		  			
-  			</div>
+<h2 class="animated FadeIn" id="quote"> Temperature is rising and body odor is increasing!</h2>
 
-  			<h2 class="animated FadeIn" id="quote"> Temperature is rising and body odor is increasing!</h2>
-</header>
-
-  
-
-  	<div class="jumbotron">
-  		<h1>The World is Getting HOt!</h1>
-  		<h2>Learn which city is the hottest</h2> 
-  	</div>
-  	  <div class="formit">
-    <%= form_tag(results_path, method: "get") do %>
-  <%= label_tag :title, "Search for:" %>
-  <%= text_field_tag :location %>
-  <%= text_field_tag :location2 %> 
-  <%= select_tag(:day_id, options_for_select([['Yesterday', 0],['Today', 1], ['Tomorrow', 2],['Day after Tomorrow',3]])) %>
-
-
-<%= submit_tag("Go") %>
-
-<% end %> 
+<div class="jumbotron" id="slogan">
+  <h1>Find out which city is hotter and avoid it!</h1> 
 </div>
+
+
+<%= render 'form' %>
+
 
 
  
