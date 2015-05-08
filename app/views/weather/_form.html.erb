@@ -17,7 +17,7 @@
         <div class="col-md-4">
           <div class="form-group">
             <label for="days">Timeframe</label>
-            <%= select_tag(:day_id, options_for_select([['Yesterday', 1],['Today', 2], ['Tomorrow', 3],['Day after Tomorrow',4]]), class:'form-control') %> 
+            <%= select_tag(:day_id, options_for_select([['Yesterday', 0],['Today', 1], ['Tomorrow', 2],['Day after Tomorrow',3]]), class:'form-control') %> 
           </div>
         </div>
       </div>
