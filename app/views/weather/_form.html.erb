@@ -1,7 +1,5 @@
-<div class="container-fluid">
-  <%= label_tag :title, "Search for:" %>      
+<div class="container-fluid">   
   <%= form_tag results_path, method: :get do %>
-
     <div class="row">
       <div class="col-lg-8 column-center" >
         <div class="col-md-4"> 
@@ -10,19 +8,17 @@
              <%= text_field_tag :location, "", class: "form-control", placeholder: "Miami" %>
           </div>
         </div>
-
         <div class="col-md-4">
           <div class="form-group">
             <label for="City2">City 2</label>
             <%= text_field_tag :location2, "", class: "form-control", placeholder: "Barcelona" %> 
           </div>
-        </div>
-        
+        </div>  
         <div class="col-md-4">
           <div class="form-group">
             <label for="days">Timeframe</label>
-            <%= select_tag(:day_id, options_for_select([['Yesterday', 0],['Today', 1], ['Tomorrow', 2],['Day after Tomorrow',3]]), class:'form-control') %> 
-          </div
+            <%= select_tag(:day_id, options_for_select([['Yesterday', 1],['Today', 2], ['Tomorrow', 3],['Day after Tomorrow',4]]), class:'form-control') %> 
+          </div>
         </div>
       </div>
     </div>  
@@ -34,7 +30,7 @@
           </div>
         </div>
       </div>
-    </div>  
+    </div> 
   <% end %> 
 </div>
  
